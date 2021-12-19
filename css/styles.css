@@ -173,24 +173,33 @@ input:focus {
 /* Media Queries */
 @media screen and (max-width: 1200px) {
   main {
-    margin: auto 3rem;
+    padding: 2rem;
   }
-
   .error-icon {
     right: 1rem;
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1000px) {
   body {
     text-align: center;
   }
 
   main {
     flex-direction: column;
-    margin: auto;
   }
 
+  .content-text,
+  .content-form {
+    width: 60%;
+  }
+
+  .paragraph {
+    padding: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
   .content-text,
   .content-form {
     width: 90%;
@@ -199,10 +208,6 @@ input:focus {
   .title {
     margin: 3rem 0 0.5rem;
     font-size: 1.75rem;
-  }
-
-  .paragraph {
-    padding: 0.75rem;
   }
 
   .try-button {
