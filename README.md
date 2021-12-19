@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/intro-component-with-signup-form-using-flexbox-6EUYli7B4](https://www.frontendmentor.io/solutions/intro-component-with-signup-form-using-flexbox-6EUYli7B4)
 - Live Site URL: [https://nakoyawilson.github.io/intro-component-with-signup-form/](https://nakoyawilson.github.io/intro-component-with-signup-form/)
 
 ## My process
