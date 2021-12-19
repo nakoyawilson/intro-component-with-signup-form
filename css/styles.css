@@ -206,6 +206,10 @@ input:focus {
     margin: 1rem 0;
   }
 
+  .error-icon {
+    right: 1rem;
+  }
+
   .terms {
     padding: 1rem 1rem 0;
   }
