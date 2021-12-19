@@ -168,6 +168,16 @@ input:focus {
 }
 
 /* Media Queries */
+@media screen and (max-width: 1200px) {
+  main {
+    margin: auto 3rem;
+  }
+
+  .error-icon {
+    right: 1rem;
+  }
+}
+
 @media screen and (max-width: 576px) {
   body {
     text-align: center;
@@ -204,10 +214,6 @@ input:focus {
 
   .form-element {
     margin: 1rem 0;
-  }
-
-  .error-icon {
-    right: 1rem;
   }
 
   .terms {
