@@ -1,6 +1,7 @@
 const claimButton = document.querySelector(".claim");
 const inputs = document.querySelectorAll("input");
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+const errorMessages = document.querySelectorAll(".error-message");
 
 const validateForm = () => {
   inputs.forEach((input) => {
@@ -51,4 +52,16 @@ inputs.forEach((input) => {
 claimButton.addEventListener("click", (e) => {
   e.preventDefault();
   validateForm();
+  let errorDisplayed = false;
+  errorMessages.forEach((errorMessage) => {
+    if (errorMessage.style.display === "block") {
+      errorDisplayed = true;
+    }
+  });
+  if (errorDisplayed === false) {
+    inputs.forEach((input) => {
+      input.value = "";
+      input.previousElementSibling.style.display = "block";
+    });
+  }
 });
