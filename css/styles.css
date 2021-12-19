@@ -33,7 +33,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto 10rem;
+  margin: auto;
+  max-width: 80rem;
 }
 
 .content-text,
