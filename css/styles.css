@@ -77,7 +77,7 @@ button {
   background-color: var(--color-white);
   color: hsla(249, 10%, 26%, 0.75);
   border-radius: 10px;
-  padding: 2rem;
+  padding: 0.75rem 2rem;
   text-align: center;
   box-shadow: 0 0.5rem rgba(0, 0, 0, 0.175);
 }
@@ -140,6 +140,7 @@ input:focus {
   font-weight: 600;
   letter-spacing: 2px;
   box-shadow: 0 0.2rem hsl(154, 51%, 43%);
+  border-radius: 5px;
 }
 
 .claim:hover {
