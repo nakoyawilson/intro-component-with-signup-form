@@ -157,6 +157,7 @@ input:focus {
 .link {
   color: var(--color-red);
   font-weight: 600;
+  cursor: pointer;
 }
 
 /* Footer Section */
