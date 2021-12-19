@@ -1,52 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/styles.css">
-  
-  <title>Frontend Mentor | Intro component with sign up form</title>
-</head>
-<body>
-<main>
-  <div class="content-text">
-  <h1 class="title">Learn to code by watching others</h1>
-  <p class="paragraph">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable.</p>
-</div>
-  <button>Try it free 7 days then $20/mo. thereafter</button>
-<div class="content-form">
-  <div class="form">
-    <div class="form-element">
-      <label for="fname">First Name</label>
-      <input type="text" id="fname">
-    </div>
-    <div class="form-element">
-      <label for="lname">Last Name</label>
-      <input type="text" id="lname">
-    </div>
-    <div class="form-element">
-      <label for="email">Email Address</label>
-      <input type="email" id="email">
-    </div>
-    <div class="form-element">
-      <label for="name">Password</label>
-      <input type="password" id="name">
-    </div>
-    <button class="claim">Claim your free trial</button>
-  </div>
-  <p class="terms">By clicking the button, you are agreeing to our <span class="link">Terms and Services</span></p>
-</div>
-</main>
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://nakoyawilson.netlify.app/">Nakoya Wilson</a>.
-    </p>
-  </footer>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <script src="js/main.js"></script>
-</body>
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <main>
+      <div class="content-text">
+        <h1 class="title">Learn to code by watching others</h1>
+        <p class="paragraph">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+      <div class="content-form">
+        <div class="try">
+          <button class="try-button">
+            <span class="emphasized">Try it free 7 days</span> then $20/mo.
+            thereafter
+          </button>
+        </div>
+        <div class="form">
+          <form novalidate>
+            <div class="form-element">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" />
+              <img src="images/icon-error.svg" class="error-icon" />
+              <p class="error-message">First Name cannot be empty</p>
+            </div>
+            <div class="form-element">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" />
+              <img src="images/icon-error.svg" class="error-icon" />
+              <p class="error-message">Last Name cannot be empty</p>
+            </div>
+            <div class="form-element">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" />
+              <img src="images/icon-error.svg" class="error-icon" />
+              <p class="error-message">Email cannot be empty</p>
+            </div>
+            <div class="form-element">
+              <label for="name">Password</label>
+              <input type="password" id="name" />
+              <img src="images/icon-error.svg" class="error-icon" />
+              <p class="error-message">Password cannot be empty</p>
+            </div>
+            <div class="form-element">
+              <button class="claim" type="submit">Claim your free trial</button>
+              <p class="terms">
+                By clicking the button, you are agreeing to our
+                <span class="link">Terms and Services</span>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://nakoyawilson.netlify.app/">Nakoya Wilson</a>.
+      </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
