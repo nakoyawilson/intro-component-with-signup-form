@@ -181,7 +181,8 @@ input:focus {
 /* Media Queries */
 @media screen and (max-width: 1200px) {
   main {
-    padding: 2rem;
+    grid-template-columns: 25rem 1fr;
+    margin: 6rem auto;
   }
   .error-icon {
     right: 1rem;
@@ -194,12 +195,11 @@ input:focus {
   }
 
   main {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
-  .content-text,
-  .content-form {
-    width: 60%;
+  .content-text {
+    margin-top: 0;
   }
 
   .paragraph {
@@ -208,24 +208,18 @@ input:focus {
 }
 
 @media screen and (max-width: 576px) {
-  .content-text,
-  .content-form {
-    width: 100%;
-  }
-
   .title {
-    margin: 3rem 0 0.5rem;
+    margin-bottom: 0.5rem;
     font-size: 1.75rem;
   }
 
   .try-button {
-    margin-top: 3rem;
     padding: 1rem 3rem;
     line-height: 1.5;
   }
 
   .form {
-    padding: 0.5rem 1.5rem;
+    padding: 1.5rem;
   }
 
   .form-element {
