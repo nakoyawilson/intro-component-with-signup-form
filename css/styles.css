@@ -133,6 +133,11 @@ input:focus {
   position: relative;
 }
 
+.display-error {
+  border: 1px solid var(--color-red);
+  color: var(--color-red);
+}
+
 .claim {
   background-color: var(--color-green);
   color: var(--color-white);

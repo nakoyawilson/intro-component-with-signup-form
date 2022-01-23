@@ -27,10 +27,10 @@
       </div>
       <div class="content-form">
         <div class="try">
-          <button class="try-button">
+          <div class="try-button">
             <span class="emphasized">Try it free 7 days</span> then $20/mo.
             thereafter
-          </button>
+          </div>
         </div>
         <div class="form">
           <form novalidate>
@@ -38,25 +38,33 @@
               <label for="fname">First Name</label>
               <input type="text" id="fname" />
               <img src="images/icon-error.svg" class="error-icon" alt="" />
-              <p class="error-message">First Name cannot be empty</p>
+              <p class="error-message" id="error-fname">
+                First Name cannot be empty
+              </p>
             </div>
             <div class="form-element">
               <label for="lname">Last Name</label>
               <input type="text" id="lname" />
               <img src="images/icon-error.svg" class="error-icon" alt="" />
-              <p class="error-message">Last Name cannot be empty</p>
+              <p class="error-message" id="error-lname">
+                Last Name cannot be empty
+              </p>
             </div>
             <div class="form-element">
               <label for="email">Email Address</label>
               <input type="email" id="email" />
               <img src="images/icon-error.svg" class="error-icon" alt="" />
-              <p class="error-message">Email cannot be empty</p>
+              <p class="error-message" id="error-email">
+                Email cannot be empty
+              </p>
             </div>
             <div class="form-element">
               <label for="name">Password</label>
               <input type="password" id="name" />
               <img src="images/icon-error.svg" class="error-icon" alt="" />
-              <p class="error-message">Password cannot be empty</p>
+              <p class="error-message" id="error-password">
+                Password cannot be empty
+              </p>
             </div>
             <div class="form-element">
               <button class="claim" type="submit">Claim your free trial</button>

@@ -1,16 +1,18 @@
-const claimButton = document.querySelector(".claim");
+const claimForm = document.querySelector("form");
 const inputs = document.querySelectorAll("input");
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const errorMessages = document.querySelectorAll(".error-message");
 
 const validateForm = () => {
   inputs.forEach((input) => {
+    const errorID = input.nextElementSibling.nextElementSibling.id;
     if (input.value === "") {
       input.nextElementSibling.style.display = "inline";
       input.nextElementSibling.nextElementSibling.style.display = "block";
       input.previousElementSibling.style.display = "none";
-      input.style.border = "1px solid hsl(0, 100%, 74%)";
-      input.style.color = "hsl(0, 100%, 74%)";
+      input.classList.add("display-error");
+      input.setAttribute("aria-invalid", "true");
+      input.setAttribute("aria-describedBy", errorID);
       if (input.type === "email") {
         input.nextElementSibling.nextElementSibling.innerHTML =
           "Email cannot be empty";
@@ -21,13 +23,13 @@ const validateForm = () => {
       input.nextElementSibling.nextElementSibling.innerHTML =
         "Looks like this is not an email";
       input.previousElementSibling.style.display = "none";
-      input.style.border = "1px solid hsl(0, 100%, 74%)";
-      input.style.color = "hsl(0, 100%, 74%)";
+      input.classList.add("display-error");
     } else {
       input.nextElementSibling.style.display = "none";
       input.nextElementSibling.nextElementSibling.style.display = "none";
-      input.style.border = "1px solid hsla(246, 25%, 77%, 0.5)";
-      input.style.color = "hsl(249, 10%, 26%)";
+      input.classList.remove("display-error");
+      input.removeAttribute("aria-invalid");
+      input.removeAttribute("aria-describedBy");
     }
   });
 };
@@ -49,7 +51,7 @@ inputs.forEach((input) => {
   });
 });
 
-claimButton.addEventListener("click", (e) => {
+claimForm.addEventListener("submit", (e) => {
   e.preventDefault();
   validateForm();
   let errorDisplayed = false;
